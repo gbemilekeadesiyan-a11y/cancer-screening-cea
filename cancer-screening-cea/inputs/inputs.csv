@@ -1,0 +1,18 @@
+parameter,value,low,high,distribution,unit,module,owner,source,notes
+n_age_init,50,,,,years,engine,Samuel,TBD,Age the cohort starts at
+n_cycles,50,,,,cycles,engine,Samuel,TBD,One cycle = one year
+p_H_Pre,NA,,,beta,prob/year,natural_history,Francis,TBD,Healthy to preclinical cancer
+p_Pre_Clin,NA,,,beta,prob/year,natural_history,Francis,TBD,Preclinical to clinical (symptoms); calibrate to SEER
+p_Clin_D,NA,,,beta,prob/year,natural_history,Francis,TBD,Clinical cancer to cancer death
+p_D_other,NA,,,,prob/year,natural_history,Francis,TBD,Other-cause death; later replace with US life table by age
+sens,NA,,,beta,proportion,natural_history,Francis,TBD,Test sensitivity
+spec,NA,,,beta,proportion,natural_history,Francis,TBD,Test specificity
+c_screen,NA,,,gamma,USD,economics,Sally,TBD,Cost per screening test
+c_followup,NA,,,gamma,USD,economics,Sally,TBD,Follow-up testing after a positive screen
+c_treat_early,NA,,,gamma,USD/year,economics,Sally,TBD,Treatment cost for screen-detected (early) cancer
+c_treat_late,NA,,,gamma,USD/year,economics,Sally,TBD,Treatment cost for clinically detected cancer
+u_H,NA,,,beta,utility,economics,Sally,TBD,Quality weight Healthy
+u_Pre,NA,,,beta,utility,economics,Sally,TBD,Quality weight preclinical
+u_Clin,NA,,,beta,utility,economics,Sally,TBD,Quality weight clinical cancer
+r_disc,0.03,,,,rate/year,economics,Sally,TBD (US 3% convention; add primary source),Discount rate for costs and QALYs
+wtp,100000,,,,USD/QALY,economics,Sally,TBD (add primary source),Willingness-to-pay threshold
